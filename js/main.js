@@ -102,9 +102,9 @@ var app = new Vue({
 
       let year = 2022 - this.year1 ;
 
-      let x =(((Math.pow(year, 2) / 10 ) - 10) + 5) * 2
+      let x =(((year / 10 ) - 10) + 5) * 2
       x = x.toFixed(2);
-      let msg = `Pista: La edad de la persona en el año 2022 esta dada por la siguiente operacion x = ((( ${x} / 2) - 5 )+ 10) * 10 )^ (1/2)  `
+      let msg = `Pista: La edad de la persona en el año 2022 esta dada por la siguiente operacion x = ((( ${x} / 2) - 5 )+ 10) * 10 ) `
       // let msg = `Pista: La edad de la persona en el año 2022 esta dada por la siguiente operacion x =  ( ${year/5 + 3} - 3 )* 5   `
       let attempt = this.level[this.option-1].attempt - this.attempts;
 
