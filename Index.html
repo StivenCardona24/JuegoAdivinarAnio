@@ -18,9 +18,9 @@
 
         <!-- El main hace referencia a nuestro login y pagina inicial del juego
         donde podran leer la carta de instrucciones y la registrarse -->
-        <main class="container  signIn "  v-if="page ==0" >
+        <main class="container  abs-center "  v-if="page ==0" >
 
-            <div class="instructions">
+            <div class=" mb-3 form2 container">
                 <h2>Carta de instrucciones</h2>
                 <div class="instructions-list">
                 <ol>
@@ -35,7 +35,7 @@
             </div>
         
 
-            <div class="sigIn-formulario text-center">
+            <div class=" text-center form" >
 
               
                 <!-- <img src="Images/shoes.png" alt="Icono" class="sigIn-Icon "> -->
@@ -74,7 +74,7 @@
         <!-- Seccion donde estan ubicados las opciones, botones, inputs del juego -->
         <section class="container juego p-5 "  v-if="page !=0">
             <div class="row">
-                <div class="col-4 ">
+                <div class="col-md-4 col-sm-6">
                    
                         <label for="formGroupExampleInput" class="form-label">Ingrese El Año:</label>
                         <input type="number" class="form-control mb-3" id="formGroupExampleInput" placeholder="Ingrese el año" v-model="year2">
@@ -90,7 +90,7 @@
                           </div>
                 </div>
 
-                <div class="col">
+                <div class="col-md-4 col-sm-6">
                     <div class="spinner-grow text-danger" role="status" v-for="i in attempts">
                         <span class="visually-hidden" >Loading...</span>
                       </div>
@@ -112,7 +112,7 @@
 
 
                
-                <div class="col">
+                <div class="col-md-4 col-sm-6" >
                     <div class="text-center mb-3">
                         <button type="button" class="btn btn-danger text-center" id="player" @click="viewTable" disabled>Ver jugadores</button>
                       </div>
